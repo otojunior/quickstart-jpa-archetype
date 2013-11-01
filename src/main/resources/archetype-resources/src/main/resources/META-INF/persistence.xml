@@ -4,7 +4,11 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 	<persistence-unit name="default" transaction-type="RESOURCE_LOCAL">
 		<description>Default Persistence Unit</description>
+		
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<!-- <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider> -->
+		<!-- <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider> -->
+		
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test;MODE=Oracle" />
@@ -17,6 +21,13 @@
 			<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" /> -->
 			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
 			<property name="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.ImprovedNamingStrategy" />
+			
+			<!-- Use of EclipseLink -->
+			<!-- <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/> -->
+      		<!-- <property name="eclipselink.target-database" value="org.eclipse.persistence.platform.database.oracle.Oracle10Platform"/> -->
+      		
+      		<!-- Use of Open JPA -->
+      		<!-- <property name="openjpa.jdbc.DBDictionary" value="oracle"/> -->      		
 		</properties>
 	</persistence-unit>
 </persistence>

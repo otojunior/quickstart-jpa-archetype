@@ -8,10 +8,10 @@
 #
 mvn archetype:generate -DarchetypeGroupId=org.otojunior.archetype \
 -DarchetypeArtifactId=quickstart-jpa-archetype \
--DarchetypeVersion=0.0.1-SNAPSHOT \
+-DarchetypeVersion=$2 \
 -DgroupId=org.otojunior \
 -DartifactId=$1 \
--Dversion=0.0.1-SNAPSHOT \
+-Dversion=1.0-SNAPSHOT \
 -Dpackage=org.otojunior.$1 \
 -Dmaven.test.skip=true \
--B $2  
+-B $3

@@ -94,10 +94,16 @@
 		    <scope>test</scope>
 		</dependency>
 		<dependency>
-		    <groupId>org.powermock</groupId>
-		    <artifactId>powermock</artifactId>
-		    <version>${dependency.version.powermock}</version>
-		    <scope>test</scope>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-module-junit4</artifactId>
+			<version>${dependency.version.powermock}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-api-easymock</artifactId>
+			<version>${dependency.version.powermock}</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 

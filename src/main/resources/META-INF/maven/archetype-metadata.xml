@@ -15,7 +15,6 @@
 			<directory>src/main/resources</directory>
 			<includes>
 				<include>**/*.xml</include>
-				<include>scripts-logback-dbappender/*.sql</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" packaged="true" encoding="UTF-8">
@@ -28,6 +27,12 @@
 			<directory>src/test/resources</directory>
 			<includes>
 				<include>**/*.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet encoding="UTF-8">
+			<directory>docs</directory>
+			<includes>
+				<include>**</include>
 			</includes>
 		</fileSet>
 		<fileSet encoding="UTF-8">

@@ -6,18 +6,18 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Classe principal da aplicação.
+ * Application Main Class.
  * @author <Author name>
  */
 public class App {
 	/**
-	 * Logger do SLF4J.
+	 * SLF4J Logger.
 	 */
 	private static final Logger LOG = LoggerFactory.getLogger(App.class);
 	
 	/**
-	 * Método principal da aplicação
-	 * @param args Argumentos da linha de comando.
+	 * Main method.
+	 * @param args Command line arguments.
 	 */
 	public static void main(String[] args) {
 		App app = new App();
@@ -25,7 +25,7 @@ public class App {
 	}
 	
 	/**
-	 * Cria fábrica de persistência
+	 * Creates Persistence Factory (just a sample method).
 	 */
 	public void createFactory() {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");

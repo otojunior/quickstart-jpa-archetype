@@ -73,16 +73,16 @@
 		    <artifactId>jansi</artifactId>
 		    <version>${dependency.version.jansi}</version>
 		</dependency>
-		<!-- <dependency>
+		<dependency>
 		    <groupId>org.eclipse.persistence</groupId>
 		    <artifactId>eclipselink</artifactId>
 		    <version>2.5.2</version>
-		</dependency> -->
-		<dependency>
+		</dependency>
+		<!-- <dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>${dependency.version.hibernate}</version>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>

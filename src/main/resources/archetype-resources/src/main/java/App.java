@@ -1,7 +1,5 @@
 package ${package};
 
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -9,27 +7,24 @@ import org.slf4j.LoggerFactory;
  * Application Main Class.
  * @author <Author name>
  */
-public class App {
+public final class App {
 	/**
 	 * SLF4J Logger.
 	 */
 	private static final Logger LOG = LoggerFactory.getLogger(App.class);
 	
 	/**
+	 * Private Constructor
+	 */
+	private App() {
+		LOG.trace("App instance created");
+	}
+	
+	/**
 	 * Main method.
 	 * @param args Command line arguments.
 	 */
 	public static void main(String[] args) {
-		App app = new App();
-		app.createFactory();
-	}
-	
-	/**
-	 * Creates Persistence Factory (just a sample method).
-	 */
-	public void createFactory() {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
-		LOG.info(String.valueOf(emf.isOpen()));
-		emf.close();
+		LOG.info("${artifactId} JPA Application");
 	}
 }

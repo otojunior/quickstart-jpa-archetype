@@ -1,11 +1,10 @@
 package ${package};
 
-import static org.junit.Assert.*;
-
 import org.apache.commons.lang3.ArrayUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.powermock.reflect.Whitebox;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,11 +17,6 @@ public class AppTest {
 	 * SLF4J Logger.
 	 */
 	private static final Logger LOG = LoggerFactory.getLogger(App.class);
-	
-	/**
-	 * Class to be tested.
-	 */
-	private App app;
 
 	/**
 	 * Tests setup.
@@ -30,8 +24,7 @@ public class AppTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
-		LOG.debug("Setup do teste");
-		app = new App();
+		LOG.debug("Test Setup");
 	}
 
 	/**
@@ -40,8 +33,16 @@ public class AppTest {
 	 */
 	@After
 	public void tearDown() throws Exception {
-		LOG.debug("Tear down do teste");
-		app = null;
+		LOG.debug("Test Tear Down");
+	}
+	
+	/**
+	 * Constructor test.
+	 * @throws Exception 
+	 */
+	@Test
+	public void testConstructor() throws Exception {
+		Whitebox.invokeConstructor(App.class, ArrayUtils.EMPTY_OBJECT_ARRAY);
 	}
 
 	/**
@@ -50,14 +51,5 @@ public class AppTest {
 	@Test
 	public void testMain() {
 		App.main(ArrayUtils.EMPTY_STRING_ARRAY);
-	}
-
-	/**
-	 * createFactory method tests.
-	 */
-	@Test
-	public void testCreateFactory() {
-		assertNotNull(app);
-		app.createFactory();
 	}
 }

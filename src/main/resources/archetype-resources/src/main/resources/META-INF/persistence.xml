@@ -5,9 +5,28 @@
 	
 	<persistence-unit name="default" transaction-type="RESOURCE_LOCAL">
 		<description>Default Persistence Unit</description>
+
+		<!--
+			******************************************************************************
+			Persistence provider for persistence layer (DAOs) unit tests.
+			This archetype supports Hibernate (JBoss default) and 
+			EclipseLink (Glassfish default) implementation.
+			This configuration is Glassfish enabled by default (Reference implementation).
+			Uncomment the Hibernate provider for use Hibernate. Implementation also must 
+			be selected in project POM (JBoss/Hibernate or Glassfish).
+			******************************************************************************
+		-->
 		
 		<!-- <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider> -->
 		<!-- <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider> -->
+				
+		<!--
+			******************************************************************************
+			<class> tag only necessary for unit tests because the entity source code has 
+			been located in sparated folder that application.
+			******************************************************************************
+		-->
+		<class>${package}.demo.crud.entity.User</class>
 		
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
@@ -20,14 +39,15 @@
 			<property name="eclipselink.logging.level" value="FINE" />
       		<!-- <property name="eclipselink.target-database" value="org.eclipse.persistence.platform.database.oracle.Oracle10Platform"/> -->
 			
-			<!-- <property name="hibernate.show_sql" value="true" /> -->
-			<!-- <property name="hibernate.format_sql" value="true" /> -->
-			<!-- <property name="hibernate.transaction.flush_before_completion" value="true" /> -->
-			<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" /> -->
-			<!-- <property name="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.ImprovedNamingStrategy" /> -->
+			<!-- Use of Hibernate -->
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.transaction.flush_before_completion" value="true" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
+			<property name="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.ImprovedNamingStrategy" />
 			
       		<!-- Use of Open JPA -->
-      		<!-- <property name="openjpa.jdbc.DBDictionary" value="oracle"/> -->      		
+      		<property name="openjpa.jdbc.DBDictionary" value="oracle"/>      		
 		</properties>
 	</persistence-unit>
 </persistence>

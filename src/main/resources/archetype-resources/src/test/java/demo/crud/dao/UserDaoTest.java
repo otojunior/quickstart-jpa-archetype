@@ -31,7 +31,7 @@ public class UserDaoTest {
 	
 	@BeforeClass
 	public static void beforeClass() {
-		factory = Persistence.createEntityManagerFactory("test");
+		factory = Persistence.createEntityManagerFactory("default");
 	}
 	
 	@AfterClass

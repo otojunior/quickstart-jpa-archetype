@@ -37,6 +37,23 @@
 		<plugin.version.sonar-maven3-plugin>4.4</plugin.version.sonar-maven3-plugin>
 	</properties>
 
+	<!-- 
+	<scm>
+		<developerConnection>scm:git:[Git Repo URL]</developerConnection>
+	</scm>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>[Maven Snapshot Repo ID]</id>
+			<url>[Maven Snapshot Repo URL]</url>
+		</snapshotRepository>
+		<repository>
+			<id>[Maven Release Repo ID]</id>
+			<url>[Maven Release Repo URL]</url>
+		</repository>
+	</distributionManagement>
+	-->
+
 	<dependencies>
 		<dependency>
 		    <groupId>org.apache.commons</groupId>

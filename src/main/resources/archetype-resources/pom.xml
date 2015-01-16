@@ -147,6 +147,8 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
 							<mainClass>${package}.App</mainClass>
 						</manifest>
 					</archive>

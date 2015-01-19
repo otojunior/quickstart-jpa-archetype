@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Application test class.
- * @author <Author name>
+ * @author [Author name]
  */
 public class AppTest {
 	/**

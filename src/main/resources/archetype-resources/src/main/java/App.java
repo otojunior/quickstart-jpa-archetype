@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Application Main Class.
- * @author <Author name>
+ * @author [Author name]
  */
 public final class App {
 	/**

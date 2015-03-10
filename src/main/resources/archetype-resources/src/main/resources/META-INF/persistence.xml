@@ -26,8 +26,6 @@
 			been located in sparated folder that application.
 			******************************************************************************
 		-->
-		<class>${package}.demo.crud.entity.User</class>
-		
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test" />

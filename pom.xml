@@ -25,9 +25,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<extension.version.wagon>1.0-beta-2</extension.version.wagon>
-		<plugin.version.java>1.7</plugin.version.java>
+		<plugin.version.java>1.8</plugin.version.java>
 		<plugin.version.buildnumber-maven-plugin>1.3</plugin.version.buildnumber-maven-plugin>
-		<plugin.version.maven-changelog-plugin>2.3</plugin.version.maven-changelog-plugin>
 		<plugin.version.maven-compiler-plugin>3.1</plugin.version.maven-compiler-plugin>
 		<plugin.version.maven-jar-plugin>2.4</plugin.version.maven-jar-plugin>
 		<plugin.version.maven-release-plugin>2.5</plugin.version.maven-release-plugin>
@@ -72,24 +71,6 @@
 					<revisionOnScmFailure>true</revisionOnScmFailure>
 					<shortRevisionLength>8</shortRevisionLength>
 					<timestampFormat>{0,date,dd/MM/yyyy HH:mm:ss}</timestampFormat>
-				</configuration>
-			</plugin>
-			
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-changelog-plugin</artifactId>
-				<version>${plugin.version.maven-changelog-plugin}</version>
-				<executions>
-					<execution>
-						<phase>validate</phase>
-						<goals>
-							<goal>changelog</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<type>range</type>
-					<range>3650</range>
 				</configuration>
 			</plugin>
 			

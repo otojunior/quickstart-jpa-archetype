@@ -8,28 +8,12 @@
 		
 		<!-- The follow tag is used for auto-scan entities -->
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
-		<!-- <class>org.xxxxx.yyyyyy.Entity</class> -->
-
-		<!--
-			******************************************************************************
-			Persistence provider for persistence layer (DAOs) unit tests.
-			This archetype supports Hibernate (JBoss default) and 
-			EclipseLink (Glassfish default) implementation.
-			This configuration is Glassfish enabled by default (Reference implementation).
-			Uncomment the Hibernate provider for use Hibernate. Implementation also must 
-			be selected in project POM (JBoss/Hibernate or Glassfish).
-			******************************************************************************
-		-->
 		
+		<!-- <class>org.xxxxx.yyyyyy.Entity</class> -->
+				
 		<!-- <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider> -->
 		<!-- <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider> -->
 				
-		<!--
-			******************************************************************************
-			<class> tag only necessary for unit tests because the entity source code has 
-			been located in separated folder that application.
-			******************************************************************************
-		-->
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:test" />

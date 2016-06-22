@@ -19,7 +19,7 @@
 
 	<groupId>org.otojunior.archetype</groupId>
 	<artifactId>quickstart-jpa-archetype</artifactId>
-	<version>1.6</version>
+	<version>1.7-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	
 	<properties>
@@ -38,7 +38,7 @@
 	<scm>
 		<connection>scm:git:https://github.com/otojunior/quickstart-jpa-archetype.git</connection>
 		<developerConnection>scm:git:git@github.com:otojunior/quickstart-jpa-archetype.git</developerConnection>
-		<tag>v1.6</tag>
+		<tag>HEAD</tag>
 	</scm>
 	
 	<distributionManagement>

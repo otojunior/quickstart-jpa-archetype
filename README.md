@@ -17,6 +17,9 @@ Quickstart JPA Java Project Archetype
 =====================================
 
 [![Build Status](https://travis-ci.org/otojunior/quickstart-jpa-archetype.svg?branch=master)](https://travis-ci.org/otojunior/quickstart-jpa-archetype)
+[![Coverage Status](https://coveralls.io/repos/github/otojunior/quickstart-jpa-archetype/badge.svg?branch=master)](https://coveralls.io/github/otojunior/quickstart-jpa-archetype?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d821688d7e4448d4aa723233a7e06364)](https://www.codacy.com/app/otojunior/quickstart-jpa-archetype?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=otojunior/quickstart-jpa-archetype&amp;utm_campaign=Badge_Grade)
+
 
 1. Archetype Instalation and Use
 --------------------------------
@@ -49,10 +52,51 @@ Obs.: In root archetype folder, there is a script to help this creation. Edit th
 
 ===============================================
 
-2. Logs framework configuration.
+2. Logs framework configuration
+-------------------------------
 
 Log Framework: SLF4J (API) and Logback (Implementation). Supports many log appenders (destiny of messages): console, file, databases, etc. For logs in databases (DBAppender), the tables must be created first by scripts in:
 * [Logback Scripts](https://github.com/qos-ch/logback/tree/v_1.1.1/logback-classic/src/main/java/ch/qos/logback/classic/db/script)
 
 The JDBC drivers can be found in:
 * [Maven Repository](http://search.maven.org)
+
+3. Coveralls and Codacy Integration
+-----------------------------------
+
+```xml
+<plugin>
+	<groupId>org.eluder.coveralls</groupId>
+	<artifactId>coveralls-maven-plugin</artifactId>
+	<version>4.3.0</version>
+</plugin>
+
+<plugin>
+	<groupId>com.gavinmogan</groupId>
+    <artifactId>codacy-maven-plugin</artifactId>
+    <version>1.0.3</version>
+    <executions>
+    	<execution>
+    		<goals>
+    			<goal>coverage</goal>
+    		</goals>
+    		<configuration>
+		    	<coverageReportFile>target/site/jacoco/jacoco.xml</coverageReportFile>
+		    	<projectToken>4f56fb080b83441494c31f1180164d25</projectToken>
+		    	<apiToken>4f56fb080b83441494c31f1180164d25</apiToken>
+    		</configuration>
+    	</execution>
+    </executions>
+</plugin>
+
+```
+**projectToken** e **apiToken** got from Codacy project.
+
+Add follow lines in **.travis.yml**:
+
+```
+install: true
+script:  mvn clean test jacoco:report
+after_success:
+  - mvn coveralls:report
+```

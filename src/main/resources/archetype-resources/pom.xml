@@ -41,7 +41,6 @@
 		<plugin.version.maven-javadoc-plugin>2.10.4</plugin.version.maven-javadoc-plugin>
 		<plugin.version.maven-surefire-plugin>2.19.1</plugin.version.maven-surefire-plugin>
 		<plugin.version.maven-release-plugin>2.5.3</plugin.version.maven-release-plugin>
-		<plugin.version.sonar-maven3-plugin>5.1</plugin.version.sonar-maven3-plugin>
 	</properties>
 
 	<!-- 
@@ -269,12 +268,6 @@
 				<configuration>
 					<tagNameFormat>v@{project.version}</tagNameFormat>
 				</configuration>
-			</plugin>
-			
-			<plugin>
-				<groupId>org.codehaus.sonar</groupId>
-			    <artifactId>sonar-maven3-plugin</artifactId>
-			    <version>${plugin.version.sonar-maven3-plugin}</version>
 			</plugin>
 		</plugins>
 	</build>
